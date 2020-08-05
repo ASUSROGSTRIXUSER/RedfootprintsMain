@@ -17,6 +17,8 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           gradient: LinearGradient(
               begin: Alignment.topRight,
@@ -26,11 +28,11 @@ class _LoginPageState extends State<LoginPage> {
         child: ListView(
           children: <Widget>[
             Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Row(children: <Widget>[
                 //  VerticalText(),
-                  TextLogin(),
-                ]),
+                TextLogin(),
+
                 InputEmail(),
                 PasswordInput(),
                 ButtonLogin(),

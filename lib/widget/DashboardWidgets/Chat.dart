@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../pages/home.dart';
 import '../../pages/calls.dart';
-import '../../pages/camera.dart';
-import '../../pages/stories.dart';
 import '../../pages/contacts.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -49,10 +47,7 @@ class _ChatScreenState extends State<ChatScreen> {
       body: new PageView(
         children: [
           new Home("Home"),
-          new Calls("Calls"),
-          new Camera("Camera screen"),
-          new Stories("Stories screen"),
-          new Contacts("Contacts screen"),
+          new Calls("Contacts"),
         ],
         onPageChanged: onPageChanged,
         controller: _pageController,
@@ -75,20 +70,6 @@ class _ChatScreenState extends State<ChatScreen> {
               ),
             ),
             new BottomNavigationBarItem(
-                icon: new Icon(
-                  Icons.call,
-                ),
-                title: new Text(
-                  "Calls",
-                )),
-            new BottomNavigationBarItem(
-                icon: new Icon(
-                  Icons.camera_alt,
-                ),
-                title: new Text(
-                  "Camera",
-                )),
-            new BottomNavigationBarItem(
                 icon: new Stack(children: <Widget>[
                   new Icon(Icons.favorite),
                   new Positioned(
@@ -104,13 +85,6 @@ class _ChatScreenState extends State<ChatScreen> {
                         ],
                       ))
                 ]),
-                title: new Text(
-                  "Stories",
-                )),
-            new BottomNavigationBarItem(
-                icon: new Icon(
-                  Icons.account_circle,
-                ),
                 title: new Text(
                   "Contacts",
                 )),

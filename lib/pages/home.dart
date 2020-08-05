@@ -140,7 +140,7 @@ class Home extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
                       child: new Card(
                           elevation: 1.0,
-                          color: const Color(0xFFFFFFFF),
+                          color: Colors.transparent,
                           child: new ListTile(
                             leading: new CircleAvatar(
                               backgroundImage: new CachedNetworkImageProvider(
@@ -152,7 +152,8 @@ class Home extends StatelessWidget {
                                 new Text(
                                   ChatMockData[position].name,
                                   style: new TextStyle(
-                                      fontWeight: FontWeight.bold),
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white),
                                 ),
                                 new Text(
                                   ChatMockData[position].time,
