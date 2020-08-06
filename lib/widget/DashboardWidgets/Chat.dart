@@ -59,7 +59,7 @@ class _ChatScreenState extends State<ChatScreen> {
         ), // sets the inactive color of the `BottomNavigationBar`
         child: new BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          fixedColor: Colors.redAccent,
+          fixedColor: Colors.greenAccent,
           items: [
             new BottomNavigationBarItem(
               icon: new Icon(
@@ -80,7 +80,7 @@ class _ChatScreenState extends State<ChatScreen> {
                           new Icon(
                             Icons.brightness_1,
                             size: 12.0,
-                            color:  Colors.yellowAccent,
+                            color:  Colors.redAccent,
                           ),
                         ],
                       ))
