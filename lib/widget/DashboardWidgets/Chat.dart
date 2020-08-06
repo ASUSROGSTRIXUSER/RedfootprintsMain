@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../pages/home.dart';
 import '../../pages/calls.dart';
-import '../../pages/contacts.dart';
+
 
 class ChatScreen extends StatefulWidget {
   ChatScreen({Key key, this.title}) : super(key: key);
@@ -32,7 +32,7 @@ class _ChatScreenState extends State<ChatScreen> {
     // Animating to the page.
     // You can use whatever duration and curve you like
     _pageController.animateToPage(page,
-        duration: const Duration(milliseconds: 10), curve: Curves.linear);
+        duration: const Duration(milliseconds: 5), curve: Curves.linear);
   }
 
   void onPageChanged(int page) {
@@ -46,8 +46,8 @@ class _ChatScreenState extends State<ChatScreen> {
     return new Scaffold(
       body: new PageView(
         children: [
-          new Home("Home"),
-          new Calls("Contacts"),
+          new Home("Chat"),
+          new Calls('Contacts'),
         ],
         onPageChanged: onPageChanged,
         controller: _pageController,
@@ -55,18 +55,18 @@ class _ChatScreenState extends State<ChatScreen> {
       bottomNavigationBar: new Theme(
         data: Theme.of(context).copyWith(
           // sets the background color of the `BottomNavigationBar`
-          canvasColor: Colors.white,
+          canvasColor: Colors.deepPurple,
         ), // sets the inactive color of the `BottomNavigationBar`
         child: new BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          fixedColor: const Color(0xFF2845E7),
+          fixedColor: Colors.redAccent,
           items: [
             new BottomNavigationBarItem(
               icon: new Icon(
                 Icons.home,
               ),
               title: new Text(
-                "Home",
+                "Chat",
               ),
             ),
             new BottomNavigationBarItem(
@@ -80,7 +80,7 @@ class _ChatScreenState extends State<ChatScreen> {
                           new Icon(
                             Icons.brightness_1,
                             size: 12.0,
-                            color: const Color(0xFF2845E7),
+                            color:  Colors.yellowAccent,
                           ),
                         ],
                       ))
