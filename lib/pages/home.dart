@@ -30,8 +30,8 @@ class Home extends StatelessWidget {
       body: new Column(
         children: <Widget>[
           new Padding(padding: const EdgeInsets.fromLTRB(0.0, 3.0, 0.0, 8.0)),
-          new Container(
-            height: 220.0,
+        /*  new Container(
+            height: 150.0,
             color: const Color(0xFF1b262c),
             child: ListView.builder(
                 scrollDirection: Axis.horizontal,
@@ -51,7 +51,7 @@ class Home extends StatelessWidget {
                                 new Column(
                                   children: <Widget>[
                                     new Container(
-                                      decoration: new BoxDecoration(
+                                      /*  decoration: new BoxDecoration(
                                           image: new DecorationImage(
                                               image:
                                                   new CachedNetworkImageProvider(
@@ -59,55 +59,56 @@ class Home extends StatelessWidget {
                                                           .storyImageUrl),
                                               fit: BoxFit.cover),
                                           borderRadius:
-                                              new BorderRadius.circular(10.0)),
+                                              new BorderRadius.circular(10.0)),*/
                                       width: 100.0, //story image width
                                       height: 140.0,
-                                      child: new Padding(
+                                      /* child: new Padding(
                                         padding: const EdgeInsets.fromLTRB(
-                                            5.0, 85.0, 5.0, 5.0),
-                                        child: new Text(
-                                          storiesMockData[position].name,
-                                          style: new TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 18.0,
-                                              fontStyle: FontStyle.normal,
-                                              color: Colors.white),
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                          textAlign: TextAlign.center,
-                                        ),
-                                      ), //story image height
-                                    ),
-                                  ],
-                                ),
-                                new Padding(
-                                  child: new PhysicalModel(
-                                    borderRadius:
-                                        new BorderRadius.circular(25.0),
-                                    color: Colors.transparent,
-                                    child: new Container(
-                                      width: 50.0,
-                                      height: 50.0,
-                                      decoration: new BoxDecoration(
-                                        image: new DecorationImage(
-                                            image:
-                                                new CachedNetworkImageProvider(
-                                                    storiesMockData[position]
-                                                        .profileImageUrl),
-                                            fit: BoxFit.cover),
+                                            5.0, 85.0, 5.0, 5.0),*/
+                                      child: new Text(
+                                        storiesMockData[position].name,
+                                        style: new TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18.0,
+                                            fontStyle: FontStyle.normal,
+                                            color: Colors.white),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ), //story image height
+                                    // ),
+                                    new Padding(
+                                      child: new PhysicalModel(
                                         borderRadius:
                                             new BorderRadius.circular(25.0),
-                                        border: new Border.all(
-                                            width: 3.0,
-                                            color: storiesMockData[position]
-                                                    .storySeen
-                                                ? Colors.grey
-                                                : const Color(0xFF2845E7)),
+                                        color: Colors.transparent,
+                                        child: new Container(
+                                          width: 50.0,
+                                          height: 20.0,
+                                          decoration: new BoxDecoration(
+                                            image: new DecorationImage(
+                                                image:
+                                                    new CachedNetworkImageProvider(
+                                                        storiesMockData[
+                                                                position]
+                                                            .profileImageUrl),
+                                                fit: BoxFit.cover),
+                                            borderRadius:
+                                                new BorderRadius.circular(25.0),
+                                            border: new Border.all(
+                                                width: 3.0,
+                                                color: storiesMockData[position]
+                                                        .storySeen
+                                                    ? Colors.grey
+                                                    : const Color(0xFF2845E7)),
+                                          ),
+                                        ),
                                       ),
+                                      padding: const EdgeInsets.fromLTRB(
+                                          5.0, 65.0, 5.0, 0.0),
                                     ),
-                                  ),
-                                  padding: const EdgeInsets.fromLTRB(
-                                      5.0, 65.0, 5.0, 0.0),
+                                  ],
                                 ),
                                 new Padding(
                                     padding: const EdgeInsets.fromLTRB(
@@ -132,7 +133,7 @@ class Home extends StatelessWidget {
                         ),
                       ],
                     )),
-          ),
+          ),*/
           new Expanded(
             child: ListView.builder(
                 itemBuilder: (context, position) {
@@ -140,7 +141,7 @@ class Home extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
                       child: new Card(
                           elevation: 1.0,
-                          color: const Color(0xFFFFFFFF),
+                          color: Colors.transparent,
                           child: new ListTile(
                             leading: new CircleAvatar(
                               backgroundImage: new CachedNetworkImageProvider(
@@ -152,7 +153,8 @@ class Home extends StatelessWidget {
                                 new Text(
                                   ChatMockData[position].name,
                                   style: new TextStyle(
-                                      fontWeight: FontWeight.bold),
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white),
                                 ),
                                 new Text(
                                   ChatMockData[position].time,

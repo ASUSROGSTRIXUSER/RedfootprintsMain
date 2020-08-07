@@ -9,7 +9,7 @@ class _TextLoginState extends State<TextLogin> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 30.0, left: 110.0),
+      padding: const EdgeInsets.all(30),
       child: Container(
         //color: Colors.green,
         height: 200,

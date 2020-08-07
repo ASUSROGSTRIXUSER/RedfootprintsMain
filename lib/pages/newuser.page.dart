@@ -25,13 +25,9 @@ class _NewUserState extends State<NewUser> {
         child: ListView(
           children: <Widget>[
             Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Row(
-                  children: <Widget>[
-                    //   SingUp(),
-                    TextLogin(),
-                  ],
-                ),
+                TextLogin(),
                 NewNome(),
                 NewEmail(),
                 PasswordInput(),
